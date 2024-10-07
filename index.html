@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/TRA.jpg" type="image/tra."> <!-- Favicon link -->
+  <title>EFD | Receipt Verification Portal</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    nav {
+       width: 100%;
+       position: fixed;
+       top: 0;
+       background-color: yellow;
+       border-bottom: 12px solid black; /* Add border thickness and color */
+       text-align: center;
+       padding: 10px 0;
+       z-index: 10;
+    }
+
+
+    nav h1 {
+      margin: 0;
+      font-size: 1.5em;
+      color: black;
+      font-family: sans;
+    }
+
+    .container {
+      margin-top: 65px;
+      margin-bottom: 35px;
+      max-width: 600px;
+      background-color: white;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 5px;
+    }
+
+    .logo img {
+      display: block;
+      margin: 0 auto;
+      width: 100px;
+      height: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      color: #333;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .section-divider {
+      width: 100%;
+      height: 1px;
+      background-color: #ddd;
+      margin: 20px 0;
+    }
+
+    .info {
+      text-align: center;
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    .info p {
+      margin: 5px 0;
+      text-align: left; 
+    }
+
+    .items {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      color: #333;
+      font-weight: bold;
+      padding: 10px 0;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .button {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 10px 0;
+      background-color: Yellow;
+      color: black;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+      border-radius: 5px;
+      border: none;
+      margin-top: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px 0;
+      background-color: #f1f1f1;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      font-size: 0.9em;
+    }
+
+    img.qr-code {
+      display: block;
+      margin: 20px auto;
+      width: 150px;
+      height: 150px;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        width: 90%;
+        margin: 20px auto;
+        padding: 15px;
+      }
+
+      .items {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .logo img {
+        width: 80px;
+      }
+
+      img.qr-code {
+        width: 120px;
+        height: 120px;
+      }
+
+      .button {
+        font-size: 0.9em;
+        padding: 8px 0;
+        color: yellow;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <h1>TAXPAYER RECEIPT VERIFICATION PORTAL</h1>
+  </nav>
+
+  <div class="container">
+    <div class="logo">
+      <img src="img/tra.png" alt="Company Logo">
+    </div>
+
+    <div class="section-divider"></div>
+
+    <div class="section-title">KAFACO COMPANY LIMITED</div>
+    <div class="info">
+       <label> <b>12020200</b></label>
+      <p><b>MOBILE:</b> +255 654 418 671</p>
+      <p><b>TIN:</b> 136479164</p>
+      <p><b>VRN:</b> 400330470</p>
+      <p><b>SERIAL NO:<b/> 03TZ442025895</p>
+      <p><b>UIN:</b> 01181F-10587530413647916403TZ442025895</p>
+      <p><b>TAX OFFICE:</b> Tax Office Kinondoni</p>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <div class="info">
+      <p><b>CUSTOMER NAME:</b> A</p>
+      <p><b>CUSTOMER ID TYPE:</b> TAXPAYER IDENTIFICATION NUMBER</p>
+      <p><b>CUSTOMER ID:</b> 000000000</p>
+      <p><b>CUSTOMER MOBILE:<b> n/a</p>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <div class="info">
+      <p>RECEIPT NO:</p>
+      <p>Z NUMBER:</p>
+      <p>RECEIPT DATE: <!-- Insert Dynamic Date --></p>
+      <p>RECEIPT TIME: <!-- Insert Dynamic Time --></p>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <div class="section-title">Purchased Items</div>
+
+    <div class="items">
+      <div>Description</div>
+      <div>Qty</div>
+      <div>Amount</div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <div class="items">
+      <div>TOTAL EXCL OF TAX:</div>
+      <div><!-- Insert Total Amount --></div>
+    </div>
+
+    <div class="items">
+      <div>TAX RATE A (18%):</div>
+      <div><!-- Insert Tax Amount --></div>
+    </div>
+
+    <div class="items">
+      <div>TOTAL TAX:</div>
+      <div><!-- Insert Total Tax --></div>
+    </div>
+
+    <div class="items">
+      <div>TOTAL INCL OF TAX:</div>
+      <div><!-- Insert Total Amount Incl of Tax --></div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <div class="center">
+      <p>RECEIPT VERIFICATION CODE</p>
+      <p><strong>Passkey: 1238884848<!-- Insert Dynamic Passkey --></strong></p>
+      <img src="img/QR/443EOS08Z0I.png" alt="QR Code" class="qr-code">
+    </div>
+
+    <div class="section-divider"></div>
+
+    <div class="center">
+      ***END OF LEGAL RECEIPT***
+    </div>
+
+    <button class="button" onclick="generateReceipt()">⎙ Print Receipt</button>
+  </div>
+
+  <footer>
+    © 2024 - TRA Receipt Verification Portal
+  </footer>
+
+  <script>
+    async function generateReceipt() {
+      window.print();
+    }
+  </script>
+
+</body>
+</html>
